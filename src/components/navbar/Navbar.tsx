@@ -18,12 +18,12 @@ function Navbar() {
             <button>Search</button>
           </div>
           <div className="cart">
-                <div className="totalPrice flex p-3 bg-blue-500" style={{borderTopLeftRadius: "10px", borderBottomLeftRadius: "10px"}}>
-                    <h1 className="text-white">$0.00</h1>
+                <div className="totalPrice flex p-2 bg-blue-500" style={{borderTopLeftRadius: "10px", borderBottomLeftRadius: "10px"}}>
+                    <h5 className="text-white">$0.00</h5>
                     
                 </div>
-                <div style={{borderTopRightRadius: "10px" , borderBottomRightRadius: "10px"}} className="bg-white p-3">
-                    <h1>0</h1>
+                <div style={{borderTopRightRadius: "10px" , borderBottomRightRadius: "10px"}} className="bg-white p-2">
+                    <h5>0</h5>
                 </div>
                 <i className="fa-solid fa-cart-shopping fa-2xl text-white ml-7"></i>
           </div>

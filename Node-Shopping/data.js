@@ -1,4 +1,4 @@
-export const data = [
+const data = [
     {
       img: "./img/logo.png",
       title: "Creed",
@@ -60,3 +60,6 @@ price: "47.00",
 desc: "Red Dead Series is a MasterPiece and masterpiece and it is very good and mechanic wise it's best..."
 }
 ]
+
+
+module.exports = { data };

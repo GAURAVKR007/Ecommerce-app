@@ -1,0 +1,110 @@
+.Nav-container {
+    display: flex;
+    /* padding: 20px; */
+    justify-content: flex-start;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rightSide {
+    display: flex;
+    background-color: #0CA7E4;
+    width: 100%;
+    justify-content: space-around;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.companyLogo {
+    /* padding: 30px 70px 30px 70px; */
+}
+
+.logo {
+    height: 100px;
+    width: 300px;
+}
+
+/* Seach Bar  */
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: #0CA7E4;
+    width: 1100px;
+  }
+  
+  /* Style for the search input field */
+  .search-bar input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    margin-right: 20px;
+    border-radius: 4px;
+    margin-left: 20px;
+    outline: none; /* Remove the input outline */
+  }
+  
+  /* Style for the search button */
+  .search-bar button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+  }
+  
+  /* Hover effect for the search button */
+  .search-bar button:hover {
+    background-color: #0056b3;
+  }
+
+  /* Sidebar  */
+
+  .left-sidebar {
+    display: flex;
+    position: relative;
+  }
+
+  .left-sidebar .sidebar {
+    position: fixed;
+    width: 255px;
+    height: 100%;
+    background: #0CA7E4;
+    padding: 30px 0;
+  }
+
+  .left-sidebar .sidebar ul li {
+    padding: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0,0.05);
+    border-top: 1px solid rgba(225,225,225,0.05);
+  }
+
+  .left-sidebar .sidebar ul li a {
+    color: #fff;
+    display: block;
+    cursor: pointer;
+  }
+
+  .left-sidebar .sidebar ul li a .icon{
+    width: 25px;
+    margin-right: 8px;
+  }
+
+  .left-sidebar .sidebar ul li:hover{
+    background: #3285dd;
+  }
+
+  .left-sidebar .sidebar ul li a{
+    color: #fff;
+  }
+
+
+

@@ -1,14 +1,20 @@
 import React from 'react'
 import Card from '../card/Card'
+import './Home.css'
 
-function Home() {
+function Home(props:any) {
+
+  const items = props.data;
   return (
     <div className='main-content' style={{
       marginLeft: '256px',
-      width : '100%',
-      padding: '50px'
+      width : "100%",
     }}>
-      <Card />
+
+      {items.map((item: any) => {
+        return <Card data={item}/>
+      })}
+      
     </div>
   )
 }

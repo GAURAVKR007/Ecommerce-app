@@ -1,10 +1,10 @@
 import React from "react";
 import './Navbar.css';
-
+// style={{position : "fixed",zIndex : 100}}
 function Navbar() {
   return (
     <div className="Nav">
-      <div className="Nav-container">
+      <div className="Nav-container" style={{position : "fixed",zIndex : 100 ,top : 0, right : 0, left : 0}}>
         <div className="companyLogo">
           <img src="/img/logo.png" alt="" className="logo" />
           {/* <i className="fa-solid fa-house fa-2xl"></i> */}
@@ -35,7 +35,7 @@ function Navbar() {
 
 export function LeftSidebar() {
     return (
-      <div className="left-sidebar">
+      <div className="left-sidebar" style={{marginTop: "100px"}}>
         <div className="sidebar">
       <ul>
         <li><a href="/"><i className="icon fa-solid fa-book fa-xl"></i> BOOKS</a></li>

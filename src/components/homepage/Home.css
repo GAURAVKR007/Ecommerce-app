@@ -1,0 +1,7 @@
+.main-content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Create 4 equal-width columns */
+    gap: 40px; /* Adjust the gap between grid items */
+    max-width: 1460px; 
+    padding: 40px; 
+}

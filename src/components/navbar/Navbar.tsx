@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import './Navbar.css';
 // style={{position : "fixed",zIndex : 100}}
-function Navbar() {
+function Navbar(props:any) {
+  const { data } = props;
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    event.preventDefault();
+    const newValue = event.target.value; // Get the new value from the event
+    data(newValue)
+  };
+
+  const handleClick = (event: any) => {
+    event.preventDefault();
+    const newValue = event.target.value;
+    data(newValue)
+  }
+
   return (
     <div className="Nav">
       <div className="Nav-container" style={{position : "fixed",zIndex : 100 ,top : 0, right : 0, left : 0}}>
@@ -14,8 +28,10 @@ function Navbar() {
             <input
               type="text"
               placeholder="Search..."
+              name="search"
+              onChange={handleChange}
             />
-            <button>Search</button>
+            <button onClick={handleClick}>Search</button>
           </div>
           <div className="cart">
                 <div className="totalPrice flex p-2 bg-blue-500" style={{borderTopLeftRadius: "10px", borderBottomLeftRadius: "10px"}}>

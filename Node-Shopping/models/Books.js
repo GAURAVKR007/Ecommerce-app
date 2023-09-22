@@ -1,5 +1,9 @@
 module.exports = (sequelize , DataTypes) => {
     const Books = sequelize.define("Books",{
+        img : {
+            type: DataTypes.STRING,
+            allowNull : false,
+        },
         title: {
             type: DataTypes.STRING,
             allowNull: false,

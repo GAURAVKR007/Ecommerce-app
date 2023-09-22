@@ -18,6 +18,7 @@ app.get('/', async(req, res) => {
     // res.send({code: "200",message : "Hello world!",data : data});
     const list = await Books.findAll();
     res.json(list)
+    // res.send(list)
 })
 
 app.post("/posts", async(req, res) => {
@@ -25,6 +26,32 @@ app.post("/posts", async(req, res) => {
     await Books.create(post);
     res.json(post)
       
+})
+
+app.get("/:title", async(req, res) => {
+    try {
+        const title = req.params.title;
+        
+        // Search for data in the database based on the 'title' parameter
+        const searchData = await Books.findAll({
+          where: {
+            title: title,
+          },
+        });
+
+        console.log(title);
+        console.log(searchData);
+    
+        if (searchData.length === 0) {
+          return res.status(404).json({ message: 'Data not found' });
+        }
+    
+        res.json(searchData);
+      } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Internal server error' });
+      }
+
 })
 
 db.sequelize.sync().then(() => {

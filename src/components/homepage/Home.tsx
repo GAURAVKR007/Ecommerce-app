@@ -25,7 +25,7 @@ function Home(props:any) {
     }}>
 
       {items.map((item: any) => {
-        return <Card data={item}/>
+        return <Card data={item} purchase={props.purchase}/>
       })}
       
     </div>}

@@ -6,7 +6,12 @@ function Card(props:any) {
     
 
     function handleClick(){
-        console.log(title, desc, price, img);
+        props.purchase({
+          title : title,
+          desc : desc,
+          price : price,
+          img : img
+        })
     }
     
   return (

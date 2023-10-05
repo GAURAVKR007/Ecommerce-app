@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import axios from 'axios';
-
+import { Routes, Route, useLocation } from "react-router-dom"
 import { showData } from './utils/data';
 
 import Navbar, { LeftSidebar } from './components/navbar/Navbar';
@@ -23,7 +23,7 @@ function App() {
   }
 
   useEffect(()=>{
-    axios.get(`http://localhost:3001/`)
+    axios.get(`http://localhost:3001`)
     .then(res=> {
       console.log(res);
       setData(res.data)
@@ -46,11 +46,22 @@ function App() {
     
   }, [searchVal, data]);
 
+  const setLinkData = (data:String) => {
+      axios.get(`${data}`)
+      .then(res=> {
+        console.log(res);
+        setData(res.data)
+      }).catch(err=>{console.error(err)})
+
+      console.log(data);
+      
+  }
+
   return (
     <div className="App">
-      <Navbar data={searchFunction}/>
+      <Navbar data={searchFunction} />
       <div className="main">
-        <LeftSidebar />
+        <LeftSidebar setMessage={setLinkData}/>
         <Home data={filterData}/>
       </div>
     </div>

@@ -4,7 +4,7 @@ const express = require('express');
 const cors = require('cors');
 const db = require('./models')
 // import db from './models'
-const {Books} = require('./models')
+const {Books, Coffees,Tags, MousePads} = require('./models')
 const bodyParser = require('body-parser')
 const app = express();
 const port = 3001;
@@ -15,15 +15,34 @@ app.use(cors())
 const {data} = require('./data.js')
 
 app.get('/', async(req, res) => {
+  console.log("Called root");
+})
+
+app.get('/books', async(req, res) => {
     // res.send({code: "200",message : "Hello world!",data : data});
     const list = await Books.findAll();
     res.json(list)
     // res.send(list)
 })
 
+app.get('/coffee',async(req, res) => {
+  const list = await Coffees.findAll();
+  res.json(list)
+})
+
+app.get('/mousepads',async(req, res) => {
+  const list = await MousePads.findAll();
+  res.json(list)
+})
+
+app.get('/luggagetags',async(req, res) => {
+  const list = await Tags.findAll();
+  res.json(list)
+})
+
 app.post("/posts", async(req, res) => {
     const post = req.body;
-    await Books.create(post);
+    await Tags.create(post);
     res.json(post)
       
 })

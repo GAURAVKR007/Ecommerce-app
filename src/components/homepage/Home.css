@@ -4,4 +4,14 @@
     gap: 40px; /* Adjust the gap between grid items */
     max-width: 1460px; 
     padding: 40px; 
+    background: #E5E5E5;
+}
+
+.error-content {
+    padding: 30px;
+}
+
+.error-content h3 {
+    padding: 10px;
+    background: rgb(255,243,205);
 }

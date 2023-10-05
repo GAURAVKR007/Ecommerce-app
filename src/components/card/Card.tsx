@@ -11,7 +11,7 @@ function Card(props:any) {
     
   return (
     <div style={{display : "inline"}}>
-      <CCard style={{ width: "18rem", height: "24rem",boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)" }}>
+      <CCard style={{ width: "18rem", background: "#E5E5E5", height: "24rem",boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)" }}>
         <CCardImage orientation="top" src={img} />
         <CCardBody>
           <CCardTitle className="" style={{textAlign: "center",fontWeight: "bold", fontSize: "23px" , marginTop: "-10px"}}>{title}</CCardTitle>

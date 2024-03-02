@@ -34,7 +34,7 @@ function App() {
   }
 
   useEffect(()=>{
-    axios.get(`http://localhost:3001`)
+    axios.get(`http://localhost:3001/books`)
     .then(res=> {
       setData(res.data)
     }).catch(err=>{console.error(err)})
